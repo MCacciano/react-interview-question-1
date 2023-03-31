@@ -90,7 +90,7 @@ const Block = ({ index, onChange, onClick, children }) => {
     }
   };
 
-  //test comment
+  //Testing out solution to request changes
   return (
     <div className='character-box' onClick={handleToggleEdit}>
       <div className='new-character-placeholder' onClick={handleOnClick} />
