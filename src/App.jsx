@@ -67,7 +67,7 @@ const Block = ({ index, onChange, onClick, children }) => {
     setMode(prev => (prev === 'read' ? 'write' : 'read'));
   };
 
-  const handleOnChangeCharacter = e => {
+  const handleOnChangeCharacter = e => {    
     setCharacter(e.target.value);
 
     if (onChange) {
@@ -76,6 +76,7 @@ const Block = ({ index, onChange, onClick, children }) => {
   };
 
   const handleOnClick = e => {
+    //What does this function do?
     e.stopPropagation();
 
     if (onClick) {
@@ -99,7 +100,7 @@ const Block = ({ index, onChange, onClick, children }) => {
           className='input'
           value={character || children}
           onChange={handleOnChangeCharacter}
-          onKeyDown={handleOnKeyDown}
+          onKeyDown={handleOnKeyDown}         
           onClick={e => e.stopPropagation()}
           maxLength={1}
         />
